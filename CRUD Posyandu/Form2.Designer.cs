@@ -64,6 +64,7 @@
             btChange.TabIndex = 2;
             btChange.Text = "CHANGE";
             btChange.UseVisualStyleBackColor = true;
+            btChange.Click += btChange_Click;
             // 
             // btDelete
             // 
@@ -74,6 +75,7 @@
             btDelete.TabIndex = 3;
             btDelete.Text = "DELETE";
             btDelete.UseVisualStyleBackColor = true;
+            btDelete.Click += btDelete_Click;
             // 
             // btBack
             // 

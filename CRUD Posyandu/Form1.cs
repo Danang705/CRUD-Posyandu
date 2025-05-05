@@ -1,4 +1,16 @@
+using Microsoft.Win32.SafeHandles;
 using Npgsql;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
 
 namespace CRUD_Posyandu
 {
@@ -48,22 +60,56 @@ namespace CRUD_Posyandu
             string tgl = tglLahir.Text;
             string ibu = NamaIbu.Text;
 
-            string sql = @"INSERT INTO PesertaPosyandu (Nama, Gender, TanggalLahir, NamaIbu) VALUES (@nama, @gender, @tgl, @ibu)";
+            NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Username=postgres;Password=12345;Database=pbo_task10") ;
 
-            NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Username=postgres;Password=12345;Database=pbo_task10");
-            conn.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
             {
-                cmd.Parameters.AddWithValue("nama", nama);
-                cmd.Parameters.AddWithValue("gender", gender);
-                cmd.Parameters.AddWithValue("tgl", tgl);
-                cmd.Parameters.AddWithValue("ibu", ibu);
+                conn.Open();
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Data Berhasil Diinput", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                if (this.Text == "Mode Edit" )
+                {
+
+                    string id = this.Tag.ToString();
+                    string sql = @"UPDATE PesertaPosyandu SET Nama = @nama, Gender = @gender, TanggalLahir = @tgl, NamaIbu = @ibu WHERE id = @id";
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+
+                    {
+                        cmd.Parameters.AddWithValue("nama", nama);
+                        cmd.Parameters.AddWithValue("gender", gender);
+                        cmd.Parameters.AddWithValue("tgl", tgl);
+                        cmd.Parameters.AddWithValue("ibu", ibu);
+                        cmd.Parameters.AddWithValue("id", Convert.ToInt32(this.Tag));
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data berhasil diperbarui!");
+                    }
+                }
+
+                else
+                {
+
+                    string sql = @"INSERT INTO PesertaPosyandu (Nama, Gender, TanggalLahir, NamaIbu) VALUES (@nama, @gender, @tgl, @ibu)";
+
+                    NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
+                    {
+                        cmd.Parameters.AddWithValue("nama", nama);
+                        cmd.Parameters.AddWithValue("gender", gender);
+                        cmd.Parameters.AddWithValue("tgl", tgl);
+                        cmd.Parameters.AddWithValue("ibu", ibu);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Berhasil Diinput", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+
+                }
             }
 
             
+
+
+
+
         }
     }
 }
