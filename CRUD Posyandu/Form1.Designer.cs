@@ -34,15 +34,13 @@
             label4 = new Label();
             label5 = new Label();
             NamaIbu = new TextBox();
-            label6 = new Label();
-            GenderLK = new CheckBox();
-            GenderPR = new CheckBox();
             tglLahir = new DateTimePicker();
             label2 = new Label();
             label3 = new Label();
             btInputdata = new Button();
             btBatal = new Button();
             GenderBox = new ComboBox();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -57,7 +55,7 @@
             // 
             // btInput
             // 
-            btInput.Font = new Font("Arial Rounded MT Bold", 9F);
+            btInput.Font = new Font("Arial Rounded MT Bold", 7.8F);
             btInput.Location = new Point(228, 387);
             btInput.Name = "btInput";
             btInput.Size = new Size(94, 29);
@@ -68,89 +66,57 @@
             // 
             // NamaAnak
             // 
-            NamaAnak.Font = new Font("Arial Rounded MT Bold", 9F);
+            NamaAnak.Font = new Font("Arial Rounded MT Bold", 7.8F);
             NamaAnak.Location = new Point(76, 118);
             NamaAnak.Name = "NamaAnak";
-            NamaAnak.Size = new Size(229, 25);
+            NamaAnak.Size = new Size(229, 23);
             NamaAnak.TabIndex = 4;
             NamaAnak.TextChanged += NamaAnak_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Arial Rounded MT Bold", 9F);
+            label4.Font = new Font("Arial Rounded MT Bold", 7.8F);
             label4.Location = new Point(76, 98);
             label4.Name = "label4";
-            label4.Size = new Size(92, 17);
+            label4.Size = new Size(80, 15);
             label4.TabIndex = 5;
             label4.Text = "Nama Anak";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Arial Rounded MT Bold", 9F);
-            label5.Location = new Point(76, 314);
+            label5.Font = new Font("Arial Rounded MT Bold", 7.8F);
+            label5.Location = new Point(76, 286);
             label5.Name = "label5";
-            label5.Size = new Size(77, 17);
+            label5.Size = new Size(68, 15);
             label5.TabIndex = 7;
             label5.Text = "Nama Ibu";
             // 
             // NamaIbu
             // 
             NamaIbu.BackColor = SystemColors.HighlightText;
-            NamaIbu.Font = new Font("Arial Rounded MT Bold", 9F);
-            NamaIbu.Location = new Point(72, 334);
+            NamaIbu.Font = new Font("Arial Rounded MT Bold", 7.8F);
+            NamaIbu.Location = new Point(72, 306);
             NamaIbu.Name = "NamaIbu";
-            NamaIbu.Size = new Size(250, 25);
+            NamaIbu.Size = new Size(250, 23);
             NamaIbu.TabIndex = 6;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial Rounded MT Bold", 9F);
-            label6.Location = new Point(416, 303);
-            label6.Name = "label6";
-            label6.Size = new Size(110, 17);
-            label6.TabIndex = 8;
-            label6.Text = "Jenis Kelamin";
-            // 
-            // GenderLK
-            // 
-            GenderLK.AutoSize = true;
-            GenderLK.Font = new Font("Arial Rounded MT Bold", 9F);
-            GenderLK.Location = new Point(420, 323);
-            GenderLK.Name = "GenderLK";
-            GenderLK.Size = new Size(105, 21);
-            GenderLK.TabIndex = 9;
-            GenderLK.Text = "Laki - Laki";
-            GenderLK.UseVisualStyleBackColor = true;
-            // 
-            // GenderPR
-            // 
-            GenderPR.AutoSize = true;
-            GenderPR.Font = new Font("Arial Rounded MT Bold", 9F);
-            GenderPR.Location = new Point(420, 353);
-            GenderPR.Name = "GenderPR";
-            GenderPR.Size = new Size(114, 21);
-            GenderPR.TabIndex = 10;
-            GenderPR.Text = "Perempuan";
-            GenderPR.UseVisualStyleBackColor = true;
             // 
             // tglLahir
             // 
-            tglLahir.Font = new Font("Arial Rounded MT Bold", 9F);
-            tglLahir.Location = new Point(76, 271);
+            tglLahir.Font = new Font("Arial Rounded MT Bold", 7.8F);
+            tglLahir.Location = new Point(76, 241);
             tglLahir.Name = "tglLahir";
-            tglLahir.Size = new Size(250, 25);
+            tglLahir.Size = new Size(250, 23);
             tglLahir.TabIndex = 11;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Arial Rounded MT Bold", 9F);
-            label2.Location = new Point(76, 251);
+            label2.Font = new Font("Arial Rounded MT Bold", 7.8F);
+            label2.Location = new Point(76, 221);
             label2.Name = "label2";
-            label2.Size = new Size(108, 17);
+            label2.Size = new Size(96, 15);
             label2.TabIndex = 12;
             label2.Text = "Tanggal Lahir";
             label2.Click += label2_Click_1;
@@ -158,10 +124,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Arial Rounded MT Bold", 9F);
+            label3.Font = new Font("Arial Rounded MT Bold", 7.8F);
             label3.Location = new Point(76, 67);
             label3.Name = "label3";
-            label3.Size = new Size(166, 17);
+            label3.Size = new Size(147, 15);
             label3.TabIndex = 13;
             label3.Text = "Input Biodata Peserta";
             // 
@@ -178,7 +144,7 @@
             // 
             // btBatal
             // 
-            btBatal.Font = new Font("Arial Rounded MT Bold", 9F);
+            btBatal.Font = new Font("Arial Rounded MT Bold", 7.8F);
             btBatal.Location = new Point(87, 387);
             btBatal.Name = "btBatal";
             btBatal.Size = new Size(94, 29);
@@ -189,12 +155,23 @@
             // 
             // GenderBox
             // 
+            GenderBox.Font = new Font("Arial Rounded MT Bold", 7.8F);
             GenderBox.FormattingEnabled = true;
-            GenderBox.Items.AddRange(new object[] { "laki -laki", "perempuan" });
-            GenderBox.Location = new Point(487, 208);
+            GenderBox.Items.AddRange(new object[] { "Laki - Laki", "Perempuan" });
+            GenderBox.Location = new Point(76, 179);
             GenderBox.Name = "GenderBox";
-            GenderBox.Size = new Size(151, 28);
+            GenderBox.Size = new Size(151, 23);
             GenderBox.TabIndex = 16;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial Rounded MT Bold", 7.8F);
+            label6.Location = new Point(76, 156);
+            label6.Name = "label6";
+            label6.Size = new Size(98, 15);
+            label6.TabIndex = 8;
+            label6.Text = "Jenis Kelamin";
             // 
             // Form1
             // 
@@ -202,9 +179,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(GenderBox);
-            Controls.Add(GenderLK);
             Controls.Add(label6);
-            Controls.Add(GenderPR);
             Controls.Add(btBatal);
             Controls.Add(btInputdata);
             Controls.Add(label3);
@@ -231,14 +206,12 @@
         private Label label4;
         private Label label5;
         private TextBox NamaIbu;
-        private Label label6;
-        private CheckBox GenderLK;
-        private CheckBox GenderPR;
         private DateTimePicker tglLahir;
         private Label label2;
         private Label label3;
         private Button btInputdata;
         private Button btBatal;
         private ComboBox GenderBox;
+        private Label label6;
     }
 }

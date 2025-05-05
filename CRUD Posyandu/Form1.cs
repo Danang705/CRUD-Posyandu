@@ -44,20 +44,18 @@ namespace CRUD_Posyandu
         private void btInput_Click(object sender, EventArgs e)
         {
             string nama = NamaAnak.Text;
-            var laki = GenderLK.Checked;
-            var perempuan = GenderPR.Checked;
+            string gender = GenderBox.Text;
             string tgl = tglLahir.Text;
             string ibu = NamaIbu.Text;
 
-            string sql = @"INSERT INTO PesertaPosyandu (Nama, Laki_laki, Perempuan, TanggalLahir, NamaIbu) VALUES (@nama, @laki, @perempuan, @tgl, @ibu)";
+            string sql = @"INSERT INTO PesertaPosyandu (Nama, Gender, TanggalLahir, NamaIbu) VALUES (@nama, @gender, @tgl, @ibu)";
 
             NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Username=postgres;Password=12345;Database=pbo_task10");
             conn.Open();
             NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
             {
                 cmd.Parameters.AddWithValue("nama", nama);
-                cmd.Parameters.AddWithValue("laki",laki);
-                cmd.Parameters.AddWithValue("perempuan", perempuan);
+                cmd.Parameters.AddWithValue("gender", gender);
                 cmd.Parameters.AddWithValue("tgl", tgl);
                 cmd.Parameters.AddWithValue("ibu", ibu);
 

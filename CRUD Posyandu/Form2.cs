@@ -22,7 +22,7 @@ namespace CRUD_Posyandu
             NpgsqlCommand comm = new NpgsqlCommand();
             comm.Connection = conn;
             comm.CommandType = CommandType.Text;
-            comm.CommandText = "SELECT Id, Nama, Laki_laki, Perempuan, TanggalLahir, NamaIbu from PesertaPosyandu"; 
+            comm.CommandText = "SELECT Id, Nama, TanggalLahir, Gender, NamaIbu from PesertaPosyandu"; 
            
 
             NpgsqlDataReader read = comm.ExecuteReader();
