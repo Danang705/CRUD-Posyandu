@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             label1 = new Label();
             dataGridView1 = new DataGridView();
             btChange = new Button();
@@ -39,10 +40,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(332, 35);
             label1.Name = "label1";
-            label1.Size = new Size(153, 17);
+            label1.Size = new Size(170, 20);
             label1.TabIndex = 0;
             label1.Text = "BIODATA PESERTA";
             // 
@@ -79,18 +81,22 @@
             // 
             // btBack
             // 
+            btBack.BackgroundImageLayout = ImageLayout.Zoom;
             btBack.Font = new Font("Arial Rounded MT Bold", 10.2F);
             btBack.Location = new Point(662, 403);
             btBack.Name = "btBack";
             btBack.Size = new Size(94, 29);
             btBack.TabIndex = 4;
-            btBack.Text = "BACK =>";
+            btBack.Text = "EXIT=>";
             btBack.UseVisualStyleBackColor = true;
+            btBack.Click += btBack_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(btBack);
             Controls.Add(btDelete);

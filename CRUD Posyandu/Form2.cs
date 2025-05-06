@@ -99,5 +99,10 @@ namespace CRUD_Posyandu
                 }
             }
         }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace CRUD_Posyandu
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
